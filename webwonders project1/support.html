@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPPORT PAGE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+<style>
+    body{
+  font-family: 'Work Sans', sans-serif;
+}
+.faq-heading{
+  border-bottom: #777;
+  padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+}
+.hr-line{
+width: 60%;
+margin: auto;
+
+}
+
+.faq-page {
+
+  color: #444;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 60%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+
+}
+.faq-body{
+  margin: auto;
+
+ width: 50%; 
+ padding: auto;
+ 
+}
+
+.active,
+.faq-page:hover {
+  background-color: #F9F9F9;
+}
+
+
+.faq-body {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.faq-page:after {
+  content: '\02795';
+ 
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+
+}
+</style>
+</head>
+
+<body>
+    <main>
+
+        <h1 class="faq-heading">SUPPORT</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How can I get more information about the room or property's facility?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>You can find details about the property in your confirmation email or on the property detail page. 
+                        For anything else, you can also contact property directly.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-two">
+
+                <!-- faq question -->
+                <h1 class="faq-page">When do I get a confirmation email?</h1>
+
+                <!-- faq answer -->
+
+                <div class="faq-body">
+                    <p>In most cases, you will receive this email along with the booking voucher (PDF file) within 30 minutes of booking. 
+                        If you still haven't received it after that time, please check your junk mail and/or spam filters. 
+                        You can also download or resend your booking voucher online.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+
+            <div class="faq-three">
+
+                <!-- faq question -->
+<h1 class="faq-page">Can I add extra bed/baby cot in my room?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>The availability of extra bed/baby cot depends on the property. 
+                        Additional cost for children, including extra beds, are not included in the reservation price unless stated. 
+                        Please contact the property directly for this information.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-four">
+
+                <!-- faq question -->
+                <h1 class="faq-page">How can I cancel my booking?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>You can cancel your booking online on the website or app. 
+                        Any cancellation fees are determined by the property and listed in your cancellation policy.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-five">
+
+                <!-- faq question -->
+                <h1 class="faq-page">Will I be charged if I cancel my booking?</h1>
+
+                <!-- faq answer -->
+
+                <div class="faq-body">
+                    <p>If you have a free cancellation booking, you won't pay a cancellation fee. 
+                        If your booking is no longer free to cancel or is non-refundable, you may incur a cancellation fee. 
+                        Any cancellation fees for a booking is determined by the property.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+
+            <div class="faq-six">
+
+                <!-- faq question -->
+<h1 class="faq-page">I want to change my booking dates. How can I do this?</h1>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our website provides you with a self-service option. 
+                        Select your booking and choose your new dates.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script>
+        
+var faq = document.getElementsByClassName("faq-page");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+    </script>
+</body>
+
+
+</html>

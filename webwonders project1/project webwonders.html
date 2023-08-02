@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <style>
+        #navbar {
+            display: flex;
+            position:sticky;
+          /*  align-items: center;*/
+        }
+        #navbar ul {
+            display: flex;
+         /*   align-items: center;*/
+        }
+        #navbar .logo img {
+            height: 103px;
+            width: 149px;
+        }
+        #navbar ul li {
+            list-style: none;
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding:9px;
+            margin: 100px 47px;
+            font-size: 25px;
+            border-radius:22px;
+           /* background-color: rgb(231, 231, 231);*/
+            opacity:0.7;
+        }
+        
+        #navbar ul li a:hover{
+            color:white;
+            background-color:black;
+        }
+
+
+        .slider-background {
+            background-image: url('https://i.pinimg.com/originals/d8/bc/e9/d8bce90753f1e7c67c602975973e7761.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 700px;
+            width: 100%;
+        }
+
+       
+
+       #navbar ul>li .dropdown > .dropdown-menu li a{
+            display:none;
+            position: absolute;
+
+        }
+
+        .dropdown .dropdown-menu li a {
+            display: block;
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
+        .dropdown .dropdown-menu li a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #navbar ul > li.dropdown:hover >.dropdown-menu {
+            display:block;
+        }
+
+        .container1{
+            
+            background-image: url('https://4.bp.blogspot.com/-kXdj2ZESV3k/WZq0PeUpbUI/AAAAAAAAAoQ/jEQH0_QoMvQK4X930Ep34H-eGUu-lq8DACEwYBhgL/s1600/Jan2017_Kanuhura_2039.jpg');
+            background-repeat: no-repeat;
+            background-size: 100vw;
+            height: 50.5rem;
+
+        }
+        #id1{
+            font-size: 56px;
+           /* color: red;
+            
+            padding: 0px;
+            /* display: block;
+            width: fit-content; */
+            /* margin-top: 20rem; */
+        }
+        #id2{
+            color: white;
+            font-size: 30px;
+          
+            display: block;
+            width: fit-content;
+            padding: 0px;
+            /* margin-top: 24rem; */
+        }
+        #id3{
+            text-decoration: none;
+          
+            border-radius: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            margin: 4px;
+            padding: 5px;
+            font-style: italic;
+        }
+        #id3:hover{
+           
+            background-color: white;
+            font-style:  italic;
+            color: black;
+
+        }
+
+        .container2{
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            margin: 9px;
+            grid-gap: 2px;
+        }
+        .item5{
+            color: darkblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .item6{
+           color:black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        
+          
+        }
+        .item11{
+            color: darkblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .container3{
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            margin: 9px;
+            grid-gap: 2px;
+            margin-top: 15px;
+        }
+        .item12{
+            font-style: italic;
+            
+            /* background-color: yellow; */
+        }
+
+
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eef8ff;
+}
+
+.container9{
+    width: 100%;
+   
+    bottom: 0;
+    background: #00093c;
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius:125px;
+    font-size:13px;
+    line-height: 20px;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content:space-between;
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.logo{
+    width: 80px;
+    margin-bottom:30px;
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom:12px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: white;
+    color: black;
+    order: 0;
+    outline: none;
+}
+form botton{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fas{
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color:  #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+.underline span{
+    width: 15px;
+    height: 100px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: 20px;
+    }
+    100%{
+        left: 20px;
+    }
+}
+@media (max-width: 700px){
+    .container9{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 25%;
+        padding: 10px;
+    }
+    .col:nth-child(2), .col:nth-child(3)
+    {
+        flex-basis:100%;
+    }
+}
+
+.item1 .image-zoom-container {
+   transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item1:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+
+.item2 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item2:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+.item3 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item3:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+.item4 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item4:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+
+
+.item7 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item7:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+.item8 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item8:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+.item9 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item9:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+.item10 .image-zoom-container {
+    transition: transform 0.3s;
+  transform-origin : center;
+}
+
+.item10:hover .image-zoom-container {
+  transform: scale(1.2); /* Increase the value to zoom in more */
+}
+
+.mid{
+    background-color:#00093c;
+    display:grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    height:180px;
+    width:100%;
+}
+#homeie{
+            display:flex;
+            flex-direction:column;
+            padding:3px 200px;
+            justify-content:center;
+            align-items:center;
+        }
+        #homeie::before{
+            content:"";
+            background:url('    https://wallup.net/wp-content/uploads/2016/05/13/348370-relaxation-couple-men-women-landscape-nature-beach-sea-relaxing-tropical-vacation.jpg')no-repeat center center/cover;
+            position:absolute;
+            height:577px;
+            width:100%;
+            z-index:-1;
+            opacity:0.6;
+        }
+
+        #aust{
+            display:flex;
+            flex-direction:column;
+            padding:3px 200px;
+            justify-content:center;
+            align-items:center;
+        }
+        #aust::before{
+            content:"";
+            background:url('https://wallup.net/wp-content/uploads/2016/05/13/348370-relaxation-couple-men-women-landscape-nature-beach-sea-relaxing-tropical-vacation.jpg')no-repeat center center/cover;
+            position:absolute;
+            height:577px;
+            width:100%;
+            z-index:-1;
+            opacity:0.6;
+        }
+
+        .review{
+            padding:10px;
+            margin:0px;
+            height:66px;
+            width:278px;
+        }
+
+        .countdown-timer {
+  font-size: 30px;
+  text-align: center;
+  margin:50px;
+  color:black;
+  display:flex;
+}
+
+/* Apply background colors to each digit */
+#days,
+#hours,
+#minutes,
+#seconds {
+  background-color: orange; /* Adjust the background color as desired */
+  color: black; /* Adjust the text color to make it readable on the background color */
+  padding: 23px; /* Add some padding to create space around each digit */
+  border-radius: 9px; /* Apply rounded corners to each digit */
+  margin: 0 5px; /* Add some space between each digit */
+  height:78px;
+  width:88px;
+}
+
+
+#day,#hr,#min,#sec{
+    display:flex;
+    align-items:center;
+}
+
+.images-row {
+  display: flex;
+}
+
+.image-container {
+  position: relative;
+  margin: 10px;
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make the container circular */
+  overflow: hidden; /* Hide any content that might overflow (e.g., if images are larger than the container) */
+  transition: opacity 0.3s; /* Add a transition to create a smooth effect */
+}
+
+.image-container img {
+  display: block;
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* Increase image opacity on hover */
+.image-container:hover {
+  opacity: 0.7; /* Adjust the opacity value (0.0 to 1.0) as needed */
+}
+
+
+.imgslide {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ /* background-color: #f2f2f2;*/
+  height:333px;
+}
+
+.slider-container {
+  position: relative;
+  width: 80%; /* Set the width as per your preference */
+  overflow: hidden;
+  padding:0px;
+  margin:0px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+
+.slide {
+  flex: 0 0 25%; /* Each slide takes up one-third of the container width */
+  padding:3px; /* Add some padding between slides */
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 92%; /* Set the image size as per your preference */
+  height: 285px;
+  border-radius:50%;
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  top: 1950px;
+  transform: translateY(-50%);
+  font-size: 48px;
+  font-weight:bolder;
+  cursor: pointer;
+
+  padding: 8px 12px;
+ 
+ width:30px;
+  user-select: none;
+}
+.slide:hover{
+  opacity:0.7;
+}
+
+.prev-arrow {
+  left: 90px;
+}
+
+.next-arrow {
+  right: 140px;
+}
+
+        .img1 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://3.bp.blogspot.com/-EB7CtGeCa-0/XBCOOyrQ3II/AAAAAAAACTI/4H02WQYUcYcEOO6sn6-4cHqO4FL-gaqEgCHMYCw/s1600/rio-de-janeiro-hd-wallpapers.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img1::before {
+  content: "Brazil";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size:27px;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img2 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://pre00.deviantart.net/352f/th/pre/i/2012/317/e/6/moraine_lake_pano_by_melonamen-d5kw7um.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img2::before {
+  content: "Canada";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size:27px;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img3 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://cdn.wallpapersafari.com/48/10/TrezLl.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img3::before {
+  content: "Cuba";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size:27px;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img4{
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://wallpaperaccess.com/full/46399.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img4::before {
+  content: "Italy";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size:27px;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img5 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2018/04/skyscrapers-and-towers-and-skyline-manila-philippines.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img5::before {
+  content: "Philippines";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size:27px;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img6 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://www.tourmyindia.com/imgnew/banner-img01.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img6::before {
+  content: "India";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size:27px;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img7 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/113/298/459/sydney-australia-circular-quay-skyline-downtown-opera-house-wallpaper-hd-for-desktop-wallpaper-preview.jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img7::before {
+  content: "Australia";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size:27px;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img8 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://th.bing.com/th/id/OIP.ARMcClUcpSM8ZqI9yHHl2gHaE7?pid=ImgDet&rs=1");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img8::before {
+  content: "Dubai";
+  position: absolute;
+  top: 0;
+  font-size:27px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img9 {
+  position: relative;
+  width: 273px;
+  height: 250px;
+  background-image: url("https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?cs=srgb&dl=building-chair-comfort-276528.jpg&fm=jpg");
+ background-size: cover; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  text-align: center; /* Adjust text alignment as needed */
+  padding-top: 80px; /* Adjust vertical positioning of text */
+  border-radius:50%;
+}
+
+/* Use ::before or ::after pseudo-elements for adding text */
+.img9::before {
+  content: "India";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Apply basic styles for the sticky navbar */
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: black; /* Change this to your desired background color */
+    padding: 10px;
+    z-index: 100;
+    opacity:0.6;
+}
+
+/* Style the image slider container */
+.slidery {
+    height: 700px; /* Set the height of the slider */
+    overflow: hidden; /* Hide overflow to prevent images from appearing outside the slider */
+    position: relative;
+}
+
+/* Ensure images in the slider take up the full width and height of the slider */
+.slidery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hide all images initially */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Show only the first image initially */
+.slidery img:first-child {
+    opacity: 0.9;
+}
+
+.slider-content{
+  position: absolute;
+    top: 95%; /* Adjust the top position to vertically center the content */
+    left: 50%; /* Adjust the left position to horizontally center the content */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color:black;
+  opacity:0.6;
+  height:100px;
+  width:100%;
+  align-items:center;
+}
+.slide-content{
+  position: absolute;
+    top: 50%; /* Adjust the top position to vertically center the content */
+    left: 50%; /* Adjust the left position to horizontally center the content */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.pre-form{
+  display:grid;
+  background-color:black;
+  opacity:1;
+  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+}
+
+    /* Styles for the slider container */
+    .sliderwalacontainer {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 535px;
+}
+
+/* Styles for the slider */
+.slider-of-div {
+  display: flex;
+  width: 900px; /* Total width = number of slides * individual slide width */
+}
+
+/* Styles for each slide */
+.slidess {
+  flex: 0 0 300px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 24px;
+}
+
+.one {
+  background-color:rgb(199, 157, 247);
+}
+
+.two {
+  background-color: rgb(199, 157, 247);
+}
+
+.three {
+  background-color: rgb(199, 157, 247);
+}
+
+/* Navigation arrows styles */
+.previousarrow,
+.nextwalaarrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.previousarrow {
+  left: 5px;
+}
+
+.nextwalaarrow {
+  right: 10px;
+}
+
+.reviewss{
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap:15px;
+}
+
+.travelpic{
+    align-items:center;
+    justify-content:center;
+   background-color: white;
+    display:grid;
+    grid-template-columns: 1fr 4fr ;
+
+}
+.gif{
+    float:left;
+}
+.textg{
+    float:center;
+    border-top-width: 30px;
+    border-bottom: 30px;
+}
+#id33{
+            text-decoration: none;
+          
+            border-radius: 20px;
+            font-size: 30px;
+            color: white;
+            background-color: rgb(199, 157, 247);
+            margin: 4px;
+            padding: 5px;
+            font-style: italic;
+        }
+
+.entry{
+  display: grid ;
+  grid-template-columns : 3fr 4fr ;
+}
+
+
+    </style>
+</head>
+<body>
+    <header id="navbar" >
+      <!-- <div class="logo">
+            <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg">
+        </div>-->
+        <ul>
+            <li class="dropdown">
+              <!--  <a href="#" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, maxime? Officiis quae mollitia, incidunt dicta amet sit voluptas laboriosam modi, excepturi dolor ratione tenetur vel maxime fuga, illum sed tempore eos illo quibusdam! Asperiores neque itaque delectus necessitatibus esse reprehenderit nihil, libero assumenda atque, aliquam labore. Cumque adipisci iste nihil!" ><i class="fa fa-fw fa-search"></i><u>Find your Adventure</u></a>
+             <!--   <ul class="dropdown-menu">
+                    <li><a href="#">Topic 1</a></li>
+                    <li><a href="#">Topic 2</a></li>
+                    <li><a href="#">Topic 3</a></li>
+                    <li><a href="#">Topic 4</a></li>
+                </ul>-->
+            </li>
+            <li><a href="Hotel.html" title="Find Best Hotels.Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, maxime? Officiis quae mollitia, incidunt dicta amet sit voluptas laboriosam modi, excepturi dolor ratione tenetur vel maxime fuga, illum sed tempore eos illo quibusdam! Asperiores neque itaque delectus necessitatibus esse reprehenderit nihil, libero assumenda atque, aliquam labore. Cumque adipisci iste nihil!"><i class='fas fa-building' style='font-size:36px;color:white;'></i> Hotels</a></li>
+            <li><a href="flights by me.html" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, maxime? Officiis quae mollitia, incidunt dicta amet sit voluptas laboriosam modi, excepturi dolor ratione tenetur vel maxime fuga, illum sed tempore eos illo quibusdam! Asperiores neque itaque delectus necessitatibus esse reprehenderit nihil, libero assumenda atque, aliquam labore. Cumque adipisci iste nihil!"><i class='fas fa-paper-plane' style='font-size:36px;color:white;'></i> Flights</a></li>
+            <li><a href="train.html" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, maxime? Officiis quae mollitia, incidunt dicta amet sit voluptas laboriosam modi, excepturi dolor ratione tenetur vel maxime fuga, illum sed tempore eos illo quibusdam! Asperiores neque itaque delectus necessitatibus esse reprehenderit nihil, libero assumenda atque, aliquam labore. Cumque adipisci iste nihil!" ><i class='fas fa-train' style='font-size:36px;color:white;'></i> Trains</a></li>
+            <li><a href="Buses.html" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, maxime? Officiis quae mollitia, incidunt dicta amet sit voluptas laboriosam modi, excepturi dolor ratione tenetur vel maxime fuga, illum sed tempore eos illo quibusdam! Asperiores neque itaque delectus necessitatibus esse reprehenderit nihil, libero assumenda atque, aliquam labore. Cumque adipisci iste nihil!"><i class='fas fa-bus-alt' style='font-size:36px;color:white;'></i> Buses</a></li>
+            <li><a href="support.html" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, maxime? Officiis quae mollitia, incidunt dicta amet sit voluptas laboriosam modi, excepturi dolor ratione tenetur vel maxime fuga, illum sed tempore eos illo quibusdam! Asperiores neque itaque delectus necessitatibus esse reprehenderit nihil, libero assumenda atque, aliquam labore. Cumque adipisci iste nihil!"><i class='fas fa-user-tie' style='font-size:36px;color:white;'></i> Support</a></li>
+        </ul>
+    
+      </header>
+      <div class="slide-content"> 
+        <div>
+          <p style="font-size:30px;text-align:center;color:white;">Book your fondest memories here</p>
+          <p style="font-size:25px;color:white;text-align:center;">Journeys, explorations, and adventures</p>
+        </div>
+      </div>
+      <div class="slider-content">
+        <div class="pre-form">
+          <div></div>
+        <div style="opacity:1;"><input type="text" placeholder="Your Name" style="background-color:white;padding:12px;margin:18px;height:47px;width:198px;opacity:1"></div>
+        <div><select style="padding:12px;margin:18px;height:47px;width:198px;">
+          <option selected="selected" >Tour Type</option>
+          <option>Escorted Tour</option>
+          <option>Rail Tour</option>
+          <option>Air Tour</option>
+          <option>Wildlife</option>
+        </select></div>
+        <div><select style="padding:12px;margin:18px;height:47px;width:198px;">
+          <option selected="selected">Destination</option>
+          <option>India</option>
+          <option>Australia</option>
+          <option>USA</option>
+          <option>Philippines</option>
+        </select></div>
+        <div><select style="padding:12px;margin:18px;height:47px;width:198px;">
+          <option selected="selected">Month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select></div>
+        <div><input type="submit" value="Search Tours" style="background-color:rgb(199, 157, 247);color:black;padding:12px;margin:18px;height:47px;width:198px;opacity:0.9;"></div>
+        <div></div>
+        </div>
+      </div>
+      <div class="slidery">
+        <img src="https://i.pinimg.com/originals/12/29/07/1229073b869356517e0bad1b6b6fe64a.jpg" alt="Image 2">
+        <img src="https://www.goabroad.com/section_cloudinary/gaplabs/image/upload/v1654157775/images2/program_content/APQaro7MlBZbE7J5VIdZBZByK5Q9tK6hFrn60ySR.jpg" alt="Image 1">
+        <img src="https://images.goabroad.com/image/upload/images2/program_content/zQTGNuuWu0zn3mAYGE5pn7FH5TpwgUGSjRE9x2ey.jpg" alt="Image 3">
+        <img src="https://www.goabroad.com/section_cloudinary/gaplabs/image/upload/v1654157776/images2/program_content/Eg4c4Iqx0jgabjfS9ZYoVlpBCaOQNdRWLTu9vVTZ.jpg">
+        <!-- Add more image tags if needed -->
+    </div>
+    <section id="home"></section>
+    <br><br><br><br><br><br>
+    <div class="entry">
+      <div style="padding:25px;margin:25px;">
+        <p style="font-size:50px;color:blue;">TRAVEL MORE TO DISCOVER YOURSELF</p><br>
+        <p style="font-size:30px;color:black;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem distinctio cupiditate esse quis ipsam at blanditiis enim consectetur velit quas similique natus soluta, obcaecati fuga quasi explicabo illum! Quasi, nobis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet dolore adipisci quis numquam itaque ducimus  </p>
+     <br><br> <button style="font-size:25px;padding:10px;background-color:rgb(199, 157, 247);color:black;">Browse More</button>
+      </div>
+      <div style="padding:44px;margin:15px;">
+        <img src="https://preview.colorlib.com/theme/safario/img/home/hero-img.png">
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+    <p style="font-size:35px;text-align:center;color:blue">Find a Tour by</p>
+    <p style="font-size:45px;text-align:center;color:blue;"><b>Destination</b></p>
+    <div class="imgslide">
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide"><div class="img1"></div></div>
+              <div class="slide"><div class="img2"></div></div>
+              <div class="slide"><div class="img3"></div></div>
+              <div class="slide"><div class="img4"></div></div>
+              <div class="slide"><div class="img5"></div></div>
+              <div class="slide"><div class="img6"></div></div>
+              <div class="slide"><div class="img7"></div></div>
+              <div class="slide"><div class="img8"></div></div>
+              <div class="slide"><div class="img9"></div></div>
+             <!-- <div class="slide"><div class="img10"></div></div>
+              <div class="slide"><div class="img11"></div></div>
+              <div class="slide"><div class="img12"></div></div>
+        
+              <!-- Add more slides as needed -->
+            </div>
+        </div>
+        </div>
+            <div class="prev-arrow">&#10094;</div>
+            <div class="next-arrow">&#10095;</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br>
+    <div class="travelpic">
+      <div class="gif">
+          <img src=https://i.gifer.com/D5Ui.gif width="700px" height="600px">
+      </div>
+      <div class="textg">
+        <br>
+          <h1 style="color:blue;">Must Try Adventures</h1>
+          <br><br>
+          <h3 id="id33" style="font-size: 25px;color: black;width:266px;">-> Paragliding</h3><br>
+          <h3 id="id33" style="font-size: 25px;color:black;width:266px;">-> Surfing</h3><br>
+          <h3 id="id33" style="font-size: 25px;color:black;width:266px;">-> Rafting</h3><br>
+          <h3 id="id33" style="font-size:25px;color:black;width:266px;">-> Sailing</h3><br>
+          <h3 id="id33" style="font-size: 25px;color:black;width:266px;">-> Rock- Climbing</h3><br>
+          <h3 id="id33" style="font-size:25px;color:black;width:266px;">-> Trecking</h3><br>
+          <h3 id="id33" style="font-size:25px;color:black;width:266px;"><a href="View dest.html" style="text-decoration: none;color:black;">-> Find out more</a></h3><br>
+      </div>
+      
+    </div>
+
+    <!--
+    <div class="mid"><div></div>
+        <div style="padding:18px;margin:5px;height:13px;width:358px"><br><br><p style="color:white;font-size:25px;">Where you want to go? </p></div>
+      
+     <div> <br><br>  <input type="text" placeholder="Where to?" style="height:44px; background-color: #00093c;padding:14px;margin:17px;width:169px;color:white;"></div>
+   
+   
+  <div><br><br>  <input type="date" placeholder="When?" style="height:20px; background-color: #00093c;padding:20px;margin:16px;width:159px;color:white"></div>
+ <div><br><br>   <select style="height:47px; background-color: #00093c;padding:10px;margin:15px;width:137px;color:white">Travel Type
+        <option>Travel type</option>
+        <option>Some option</option>
+        <option>Another Option</option>
+    </select>
+  </div>
+   <div><br><br> <input type="submit" name="Search" style="background-color:red; color:white;padding:15px;margin:12px;width:101px"></div>
+    <div></div>
+    </div>
+   <!-- <div class="image-row">
+        <div class="image-container"><img src="https://icon-library.com/images/icon-travel/icon-travel-8.jpg"></div>
+        <p style="font-size:25px"><b>Diverse Destinations</b></p>
+        <p style="font-size:20px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt est veritatis tempora earum natus eveniet!</p>
+        <div class="image-container" style="background-color:rgb(11, 171, 251);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-hand-holding-usd' style='font-size:60px;color:white;background-color:rgb(11, 171, 251);'></i></div>
+            <p style="font-size:25px"><b>Value for Money</b></p>
+            <p style="font-size:20px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt est veritatis tempora earum natus eveniet!</p>
+    
+    </div>-->
+    <br><br>
+   <!--<div class="container1">
+        <p id="id1" class="font-effect-outline" style="font-family: "Sofia", sans-serif;">Enjoy and do the world's top things</p><br><br>
+        <p id="id2">See the 2023's travellers choice </p><br><br>
+        <p><a href="View dest.html" id="id3">Find your favourite</a></p>
+    </div>-->
+    <!--<p style="font-size:25px;text-align:center;">Find a Tour by</p>
+    <p style="font-size:35px;text-align:center;"><b>Destination</b></p>
+    <div class="imgslide">
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide"><div class="img1"></div></div>
+              <div class="slide"><div class="img2"></div></div>
+              <div class="slide"><div class="img3"></div></div>
+              <div class="slide"><div class="img4"></div></div>
+              <div class="slide"><div class="img5"></div></div>
+              <div class="slide"><div class="img6"></div></div>
+              <div class="slide"><div class="img7"></div></div>
+              <div class="slide"><div class="img8"></div></div>
+              <div class="slide"><div class="img9"></div></div>
+             <!-- <div class="slide"><div class="img10"></div></div>
+              <div class="slide"><div class="img11"></div></div>
+              <div class="slide"><div class="img12"></div></div>
+        
+              <!-- Add more slides as needed -->
+           <!-- </div>
+        </div>
+        </div>
+            <div class="prev-arrow">&#10094;</div>
+            <div class="next-arrow">&#10095;</div>-->
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+   <!-- <section id="aust">
+        <p style="font-size:50px;color:black;"class="h-primary" >Special Tour in September,Discover Australia for</p>
+        <p style="font-size:45px;color:black;">50 customers with <span style="font-size:45px;background-color:orange;color:black;">discount 50%</span></p>
+       <br><br><p style="font-size:30px;color:red;"> <marquee>It's limited seating! Hurry up</marquee>
+            
+       </p>
+            
+        <br><br>
+        <div class="countdown-timer">
+            <div id="days">00</div><div id="day"><div>DAYS</div></div> 
+            <div id="hours">00</div><div id="hr"><div>HOURS</div></div> 
+            <div id="minutes">00</div><div id="min"><div>MINUTES</div></div> 
+            <div id="seconds">00</div><div id="sec"><div>SECONDS</div></div>
+          </div>
+    </section>-->
+    <div style="display:grid;grid-template-columns: 3fr 4fr;">
+      <div style="padding:20px;margin:5px;"><p style="font-size:40px;color:blue;">What Customers Say</p><br><p style="background-color:black;width:100px;height:5px;"> </p></div>
+      <div style="padding:20px;margin:5px;"><p style="font-size:40px;color:blue;">Trending Offers</p><br><p style="background-color:black;width:100px;height:5px;text-align: center;"> </p></div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="reviewss">
+      <div class="sliderwalacontainer">
+        <div class="slider-of-div">
+          <div class="slidess one">
+         <div style="padding:34px"> <img src="https://thumbs.dreamstime.com/b/customer-help-female-beautiful-girl-white-background-high-quality-customer-help-female-beautiful-girl-white-background-98560351.jpg" style="height:163px;width:163px;border-radius:50%;"></div>    
+         <p ><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='far fa-star' style='font-size:20px;color:black;'></i></p>
+                <p style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laboriosam quasi fugiat non molestias natus.</p><br>
+                <p><a href="#" style="text-decoration:none;color:yellow;font-size:20px;">Read More &#10095;&#10095;&#10095;&#10095;</a></p>
+                <p></p>
+            </div>
+          <div class="slidess two"><div style="padding:34px"> <img src="https://i1.wp.com/sanespaces.com/core/wp-content/uploads/2019/09/Depositphotos_6309956_xl-2015.jpg?ssl=1" style="height:163px;width:163px;border-radius:50%;"></div>    
+          <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='far fa-star' style='font-size:20px;color:black;'></i></p>
+        <p style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laboriosam quasi fugiat non molestias natus.</p><br>
+        <p><a href="#" style="text-decoration:none;color:yellow;font-size:20px;">Read More &#10095;&#10095;&#10095;&#10095;</a></p><p></p></div>
+          <div class="slidess three"><div style="padding:34px"> <img src="https://thumbs.dreamstime.com/b/young-handsome-customer-service-operator-12755899.jpg" style="height:163px;width:163px;border-radius:50%;"></div>    
+          <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='far fa-star' style='font-size:20px;color:black;'></i></p>
+        <p style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laboriosam quasi fugiat non molestias natus.</p>
+        <br>
+        <p><a href="#" style="text-decoration:none;color:yellow;font-size:20px;">Read More &#10095;&#10095;&#10095;&#10095;</a></p></div>
+       
+        </div>
+        <div class="previousarrow">&#10094;</div>
+        <div class="nextwalaarrow">&#10095;</div>
+      </div>
+      <div class="Offers" style="display:grid;grid-template-columns: 4fr 4fr;">
+        <div style="display:grid;grid-template-columns: 1fr 4fr ;border-radius:5px;
+        box-shadow:7px 5px 10px rgb(195, 193, 193);width:610px;height:270px;">
+            <div style="padding:20px;"><img src="https://www.stylerug.net/wp-content/uploads/2016/12/Failiy-1024x768.jpg" height="170px" width="200px" border-radius="3px"><br>
+            <p style="font-size:15px">&nbsp;&nbsp;T&C's Apply</p></div>
+            <div style="padding:20px;">
+                <p style="font-size:27px;"><b>For your First Holiday Booking!</b></p><br>
+                <p style="font-size:20px">Upto 30% Off </p><br>
+                <p style="font-size:20px">Apply Code : WELCOMETAA</p><br>
+                <p><a href="#" style="text-decoration: none;color:blue;font-size:25px;">&nbsp;&nbsp;View Details</a></p>
+            </div>
+        </div>
+        <div>    <div style="display:grid;grid-template-columns: 1fr 4fr ;border-radius:5px;
+            box-shadow:7px 5px 10px rgb(195, 193, 193);width:610px;height:270px;">
+                <div style="padding:20px;"><img src="https://th.bing.com/th/id/R.2d289cffdb0fef359f55208239263a3d?rik=TjRSgx3Bm7nwWw&riu=http%3a%2f%2fwww.pmldaily.com%2fwp-content%2fuploads%2f2019%2f03%2fMarriott_Diplomatic_Quarter_ruhdq_Exterior-02.JPG.jpg&ehk=XNdEmN7J%2b2Nuqc%2fxLW7tswYIFt%2bg8E5fP79VF2H6ptw%3d&risl=&pid=ImgRaw&r=0" height="170px" width="200px" border-radius="3px">
+                <p style="font-size:15px">&nbsp;&nbsp;T&C's Apply</p></div>
+                <div style="padding:20px;">
+                    <p style="font-size:27px;"><b>Live from 25th to 27th August Only!</b></p><br>
+                    <p style="font-size:20px">Upto 30% Off on International hotels </p><br>
+                    <p style="font-size:20px">Apply Code : HOTELTAA</p><br>
+                    <p><a href="#" style="text-decoration: none;color:blue;font-size:25px;">&nbsp;&nbsp;View Details</a></p>
+                </div>
+            </div></div>
+        <div><div style="display:grid;grid-template-columns: 1fr 4fr ;border-radius:5px;
+            box-shadow:7px 5px 10px rgb(195, 193, 193);width:610px;height:270px;">
+                <div style="padding:20px;"><img src="https://th.bing.com/th/id/OIP.Cpzjcw6JWhwBda_F2lNXiQHaEj?pid=ImgDet&rs=1" height="170px" width="200px" border-radius="3px">
+                <p style="font-size:15px">&nbsp;&nbsp;T&C's Apply</p></div>
+                <div style="padding:20px;">
+                    <p style="font-size:27px;"><b>Enjoy Modern & Heritage stay with: </b></p><br>
+                    <p style="font-size:20px">Upto 40% Off on Blue Diamond Hotels </p><br>
+                    <p style="font-size:20px">Apply Code : BlueDiamondTAA</p><br>
+                    <p><a href="#" style="text-decoration: none;color:blue;font-size:25px;">&nbsp;&nbsp;View Details</a></p>
+                </div></div>
+      </div>
+      <div><div style="display:grid;grid-template-columns: 1fr 4fr ;border-radius:5px;
+        box-shadow:7px 5px 10px rgb(195, 193, 193);width:610px;height:270px;">
+            <div style="padding:20px;"><img src="https://www.tripsavvy.com/thmb/v0qfyBIZ3detTbNjExu7VzlSSPU=/2304x1301/filters:fill(auto,1)/Familyinairport-6de2919e953d406987686227ad84013e.jpg" height="170px" width="200px" border-radius="3px">
+            <p style="font-size:15px">&nbsp;&nbsp;T&C's Apply</p></div>
+            <div style="padding:20px;">
+                <p style="font-size:27px;"><b>Grab 12% OFF* on domestic flights</b></p><br>
+                <p style="font-size:20px">get set and take off </p><br>
+                <p style="font-size:20px">Apply Code : FlightsTAA</p><br>
+                <p><a href="#" style="text-decoration: none;color:blue;font-size:25px;">&nbsp;&nbsp;View Details</a></p>
+            </div></div>
+    </div>
+    </div>
+    </div>
+   
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <!-- <h1 class="item6">TOP DESTINATIONS FOR YOUR NEXT VACATION</h1><br><br><br>
+    <div class="container2">
+        <div class="item1">
+            <img src="https://th.bing.com/th/id/OIP.RYXfAkAtlRduSBqRRi7LpwHaFj?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item5">Cape Town</h2>
+            <p class="item12">Known for its harbour,its natural setting in cape Flouristic region and for landmarks such as table mountain and Cape point</p>
+            
+        </div>
+        <div class="item2">
+            <img src="https://th.bing.com/th/id/OIP.kDf8F-2HjNLK473CZdWOsgHaET?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item5">Vancouver</h2>
+            <p class="item12">A bustling west coast seaport in British Columbia ,is among Canada's densese ,most ethically diverse cities.A perfect location surrounded by mountains and thriving heart</p>
+        </div>
+        <div class="item3">
+            <img src="https://th.bing.com/th/id/OIP.QVFYGP_MZ-NvvFzkxpVLNgHaE3?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item5">Kathmandu</h2>
+            <p class="item12">At the heart of the old city's mazelike alleys is a Durbar Square,which become frenetic during Indra jantra,a religious festival featuring masked dance</p>
+        </div>
+        <div class="item4">
+            <img src="https://th.bing.com/th/id/OIP.3DumFuNyKpMydjQurrHEUwHaEJ?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item5">Las vegas</h2>
+            <p class="item12">25-th most populous city in the state of Nevada.The Las Vegas Valley metropolitian area is the largest within the greater Mojavare desert.</p>
+        </div>
+    </div>
+
+    <div class="container3">
+        <div class="item7">
+            <img src="https://th.bing.com/th/id/OIP.QCN1EBydu5XC5HTdN1OfVQHaE8?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item11">Queenstown</h2>
+            <p class="item12">The town is built around an inlet called Queenstown Bay on Lake Wakatipu, a long, thin, Z-shaped lake formed by glacial processes, and has views of nearby mountains such as The Remarkables, Cecil Peak, Walter Peak and just above the town, Ben Lomond and Queenstown Hill.</p>
+            
+        </div>
+        <div class="item8">
+            <img src="https://th.bing.com/th/id/OIP.X4EflHqi49xNPyl4DuyIlwHaF0?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item11">Asheville</h2>
+            <p class="item12">Asheville has been home to some of the world's greatest artists, writers, musicians, and architects. Go shopping for cool indie wares, wearable art, local designs, and vintage styles at one of many chic boutiques.</p>
+        </div>
+        <div class="item9">
+            <img src="https://th.bing.com/th/id/OIP.YdOcJBbcRdzH3XWEGlNB6AHaER?pid=ImgDet&rs=1" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item11">Portland</h2>
+            <p class="item12">Dive into the city's history with the fragrant flower, learn the lowdown on rose gardens around town and discover tips for visiting the Portland Rose Festival in late spring.</p>
+        </div>
+        <div class="item10">
+            <img src="https://media.cntraveler.com/photos/57d85f65cf57b6524261d66e/master/pass/Pool-OmniHiltonHeadOceanfront-HiltonHead-CRHotel.jpg" width="329px" height="210px" class="image-zoom-container"><br><br>
+            <h2 class="item11">Hilton Head</h2>
+            <p class="item12"> The island features 12 miles (19 km) of beachfront on the Atlantic Ocean and is a popular vacation destination. In 2004, an estimated 2.25 million visitors infused more than $1.5 billion into the local economy.</p>
+        </div>
+    </div>-->
+    <!--<p style="font-size:25px;text-align:center;">Find a Tour by</p>
+    <p style="font-size:35px;text-align:center;"><b>Destination</b></p>
+    <div class="imgslide">
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide"><div class="img1"></div></div>
+              <div class="slide"><div class="img2"></div></div>
+              <div class="slide"><div class="img3"></div></div>
+              <div class="slide"><div class="img4"></div></div>
+              <div class="slide"><div class="img5"></div></div>
+              <div class="slide"><div class="img6"></div></div>
+              <div class="slide"><div class="img7"></div></div>
+              <div class="slide"><div class="img8"></div></div>
+              <div class="slide"><div class="img9"></div></div>
+             <!-- <div class="slide"><div class="img10"></div></div>
+              <div class="slide"><div class="img11"></div></div>
+              <div class="slide"><div class="img12"></div></div>
+        
+              <!-- Add more slides as needed -->
+          <!--  </div>
+        </div>
+        </div>
+            <div class="prev-arrow">&#10094;</div>
+            <div class="next-arrow">&#10095;</div>-->
+    <br><br><br><br><br><br><br>
+    <section id="homeie">
+        <p style="font-size:50px;color:black;"class="h-primary" >Center Achievements</p>
+        <br><br>
+        <div style="display:flex;">
+            <div class="review"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-plane' style='font-size:60px;color:rgb(141, 42, 253);'></i></p>
+                <p style="color:black;font-size:30px;"><b>94,579 Customers</b></p></div>
+            <div class="review">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-umbrella-beach' style='font-size:60px;color:rgb(141, 42, 253);'></i></p>
+                <p style="color:black;font-size:30px;"><b>1021 Destinations</b></p>
+            </div>
+            <div class="review"> 
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-globe-asia' style='font-size:60px;color:rgb(141, 42, 253);'></i></p>
+                <p style="color:black;font-size:30px;"><b>20,096 Tours</b></p>
+            </div>
+            <div class="review">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-suitcase' style='font-size:60px;color:rgb(141, 42, 253);'></i></p>
+                <p style="color:black;font-size:30px;"><b>121 Tour Types</b></p>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container9">
+        <div class="row">
+          <div class="col">
+            <img src="logo.png" class="logo">
+            <p>Our site brings to you one stop for planning your perfect vacation.
+              Book hotels, flights, trains, cabs, buses, adventure tickets and so much more.</p>
+          </div>
+          <div class="col">
+            <h3>Headquarters<div class="underline"><span></span></div></h3>
+            <p>Patel Street</p>
+            <p>Pal, Surat</p>
+            <p>Gujarat, PIN 356006, India</p>
+            <p class="email-id">tta@gmail.com</p>
+            <h4>+91-023857429</h4>
+          </div>
+          <div class="col">
+            <h3>Popular searches <div class="underline"><span></span></div></h3>
+            <ul>
+              <li><a href="#">Goa</a></li>
+              <li><a href="#">Manali</a></li>
+              <li><a href="#">Kerala</a></li>
+              <li><a href="#">Udaipur</a></li>
+              <li><a href="#">Kashmir</a></li>
+              <li><a href="#">Tirupati</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Newsletter</h3>
+            <form>
+              <i class="fa-regular fa-envelope fa-xl"></i>
+              <input type="email" placeholder="Enter your email id" required>
+              <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+              <i class="fa-brands fa-facebook fa-xl"></i>
+              <i class="fa-brands fa-twitter fa-xl"></i>
+              <i class="fa-brands fa-whatsapp fa-xl"></i>
+              <i class="fa-brands fa-pinterest fa-xl"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+     <script src="https://kit.fontawesome.com/5736e85798.js"></script>
+    <script src="JS3.js"></script><script src="JS5.js"></script>
+    <script src="JS6.js"></script><script src="JS7.js"></script>
+</body>
+</html>

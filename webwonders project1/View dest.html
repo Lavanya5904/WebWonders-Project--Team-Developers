@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure list</title>
+    <style>
+       /* *{
+        background-color: black;
+      }  */
+
+.navbar {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .navbar-nav {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar-nav li {
+        margin-right: 1rem;
+      }
+
+      .navbar-nav li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .navbar-nav li a:hover {
+        background-color: #555;
+      }
+      
+
+      #heading{
+        font-size: 3.4rem;
+        /* width: 11.4rem; */
+        margin: auto;
+        text-align: center;
+        animation-name: head;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        text-shadow: 2px 2px 2px peru;
+        /* background-color: black; */
+      }
+
+      @keyframes head{
+        0%   {color:red; }
+  25%  {color:rgba(206, 206, 14, 0.747);}
+  50%  {color:blue; }
+  75%  {color:green; }
+  100% {color:red;}
+      }
+
+      .container {
+        background-image: url('https://th.bing.com/th/id/OIP.lNmQGL7yXEufIZBUxC6p7gHaE8?pid=ImgDet&rs=1');
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: 1400px 1000px;
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+    
+
+#id1 {
+  font-size: 1.7rem;
+  color: #742525;
+  margin-top: 2rem;
+}
+
+#id2 {
+  font-size: large;
+  width: 34.5rem;
+  font-style: italic;
+  color: #ff4500;
+  margin-bottom: 2rem;
+}
+        .container1{
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-gap: 1.1rem;
+            margin: 0.7rem;
+        }
+        .number{
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 2.4rem;
+          color: brown;
+          text-shadow: 2px 2px yellowgreen;
+        }
+
+        #more {display: none;}
+        #more2{display: none;}
+        #more3{display: none;}
+        #more4{display: none;}
+        #more5{display: none;}
+        #more6{display: none;}
+        #more7{display: none;}
+        #more8{display: none;}
+        #more9{display: none;}
+        #more10{display: none;}
+
+        .image{
+          transition: transform 0.3s;
+          transform-origin: center;
+          border-radius: 10px;
+          border: 2px solid black;
+          /* box-shadow: 3px 3px 3px red; */
+        }
+        .image:hover{
+          transform: scale(0.9);
+        }
+
+        .heading{
+          color: gray;
+          animation: heading 3s infinite;
+        }
+
+        @keyframes heading{
+        0%   {color: blue; }
+  25%  {color:rgba(85, 221, 198, 0.747);}
+  50%  {color:rgb(243, 28, 28); }
+  75%  {color:rgb(204, 240, 45); }
+  100% {color:rgb(222, 211, 223);}
+      }
+
+        .btn{
+          border: 2px solid black;
+          background-color: lightcyan;
+          border-radius: 10px;
+          color: palevioletred;
+          width: 99px;
+          height: 34px;
+          font-size: 16px;
+        }
+
+        .btn:hover{
+          background-color: black;
+          color: whitesmoke;
+          border: 2px solid white;
+
+        }
+        .info{
+          font-style: italic;
+          /* font-size: larger; */
+          font-size: 18px;
+        }
+        .reviews{
+          display: inline;
+
+        }
+        .review{
+          font-style: bold;
+        }
+        .bttn{
+          background-color: green;
+          border: 1px solid black;
+          border-radius: 40px;
+          height: 12px;
+          
+        }
+        #bttn25,#bttn54,#bttn55,#bttn105,#bttn104{
+          background-color: white;
+        }
+
+
+
+
+        /* footer code */
+        .footer {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        padding: 2rem;
+      }
+
+      .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .footer-column {
+        width: 30%;
+        margin-bottom: 2rem;
+      }
+
+      .footer-heading {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-email {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-email input[type="email"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        width: 200px;
+      }
+
+      .footer-email button {
+        background-color: #fff;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .footer-social-media {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-social-media img {
+        height: 30px;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      .footer-search {
+        margin-bottom: 2rem;
+      }
+
+      .footer-search input[type="text"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+      }
+
+      .footer-countries {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      .footer-countries li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-ratings {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-ratings span {
+        margin-right: 0.5rem;
+      }
+
+      .footer-ratings img {
+        height: 20px;
+      }
+        
+      #navbar{
+            display:flex;/*All come in a row.*/
+            align-items:center;
+        }
+        
+        /*Navigation bar:Logo and Image*/
+        #logo{
+            margin:34px 45px;
+        }
+        #logo img{
+            height:82px;
+            margin:16px 10px;
+        }
+        #navbar ul{        /*navbar's ul*/
+            display:flex;
+        }
+        
+        #navbar ul li{
+            list-style:none;
+            font-size:1.3rem;
+        }
+        
+        #navbar ul li a{
+            display:block;
+            color:white;
+            /*display should be block so that we can give padding*/
+            padding:3px 22px;
+            border-radius:20px;
+            text-decoration:none/*to remove text underline*/
+        }
+        
+        #navbar ul li a:hover{
+            color:black;
+            background-color:white;
+        }
+        #navbar::before{
+            content: "";
+            background-color:black;
+            position:absolute;
+            height:18%;
+            width:100%;
+            z-index:-1;
+           /* opacity:0.6;*/
+        }
+
+    </style>
+</head>
+<body>
+
+ <!-- <div class="navbar">
+    <a href="#" class="navbar-brand">Travel & Adventure </a>
+    <ul class="navbar-nav">
+      <li><a href="#">Flights</a></li>
+      <li><a href="#">Hotels</a></li>
+      <li><a href="#">Trains</a></li>
+      <li><a href="#">Buses</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </div>-->
+  <nav id="navbar"> 
+    <div id="logo">
+        <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg">
+    </div>
+    <ul>
+        <li><a href="project webwonders.html">Home</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="flights by me.html">Flights</a></li>
+           <li><a href="train.html">Trains</a></li>
+           <li><a href="Buses.html">Buses</a></li>
+           <li><a href="support.html">Support</a></li>
+    </ul>
+</nav>
+  <div class="container">
+  <h1 id="heading">Welcome! to the world of adventure</h1>
+  
+    <h2 id="id1">Top Overall experiences of the World</h2>
+    <p id="id2">Adventure adds excitement to life and a new realm of possibility to the outdoor world. It has the beauty of being one of the few things that’s free and inside all of us.Only those who risk going too far can possibly find out how far they can go.Come on get up,live the life to the fullest and enjoy our best adventureous places</p>
+</div>
+
+    <div class="container1">
+        <div class="item1 image" >
+            <img src="https://cdn.getyourguide.com/img/location/5cced340905bd.jpeg/88.jpg" height="400px" width="600px">
+        </div>
+        <div class="item1">
+            <h2 class="number">01</h2>
+            <h1 class="heading">Atacama Desert, Chile</h1>
+            <div class="reviews">
+            <button class="bttn"></button>
+            <button class="bttn"></button>
+            <button class="bttn"></button>
+            <button class="bttn"></button>
+            <button class="bttn"></button>
+            <span class="review">6,112 reviews</span>
+            </div>
+
+            <p class="info">For an out-of-this-world adventure, look no further than the Atacama Desert in western Chile. With jagged ravines, billowing geysers and arid salt flats, there’s an extra-terrestrial quality to its landscapes that NASA once harnessed to field test Martian rovers.<span id="dots" class="d">....</span><span id="more" class="exra info" >As one of the driest places on the planet, there’s very little in the way of human development surrounding its barren plains. That said, the resulting lack of light pollution makes the sky perfect for stargazing</span></p>
+            <button onclick="myFunction()" id="myBtn" class="btn">Read more</button>
+            </div> 
+        </div>
+
+        <div class="container1">
+            <div class="item2 image">
+                <img src="https://inthesaddle-131c4.kxcdn.com/wp-content/uploads/2018/04/JW-Steppes-small.jpg" height="400px" width="600px">
+            </div>
+            <div class="item2">
+             
+                <h2 class="number">02</h2>
+                <h1 class="heading">The gobi steppe,Mongolia</h1>
+                <div class="reviews">
+                  <button class="bttn" id="bttn21"></button>
+                  <button class="bttn" id="bttn22"></button>
+                  <button class="bttn" id="bttn23"></button>
+                  <button class="bttn" id="bttn24"></button>
+                  <button class="bttn" id="bttn25"></button>
+                  <span class="review">5,678 reviews</span>
+                  </div>
+                <p class="info">This temperate grasslands, savannas, and shrublands ecoregion of the Palearctic realm forms a large crescent around the Gobi Desert, extending across central and eastern Mongolia into the eastern portion of Inner Mongolia and eastern and central Manchuria, and then southwest across the North China Plain<span id="dots2" class="d">....</span><span id="more2" class="exra info">Genghis Khan with a ride on a Mongol horse and a heartly bowl od airag.</span></p>
+                <button onclick="myFunction2()" id="myBtn2" class="btn">Read more</button>
+                </div> 
+        </div>
+
+
+        <div class="container1">
+            <div class="item3 image">
+                <img src="https://th.bing.com/th/id/OIP.vyPuOz4LyhF0Hef4ZSKMPwHaEK?pid=ImgDet&rs=1" height="400px" width="600px">
+            </div>
+            <div class="item3">
+                <h2 class="number">03</h2>
+                <h1 class="heading">Paupa New Guinea</h1>
+                <div class="reviews">
+                  <button class="bttn" id="bttn31"></button>
+                  <button class="bttn" id="bttn32"></button>
+                  <button class="bttn" id="bttn33"></button>
+                  <button class="bttn" id="bttn34"></button>
+                  <button class="bttn" id="bttn35"></button>
+                  <span class="review">7,889 reviews</span>
+                  </div>
+                <p class="info"> Papua New Guinea is THE destination for a birding, photography or artefact collector, and also a challenge for adventurous travellers to walk the famous World War 2 Kokoda Track.<span id="dots3" class="d">....</span><span id="more3" class="exra info">Sepik River past rugged jungle and traditional villages, overnighting in eco lodges along the way.</span></p>
+                <button onclick="myFunction3()" id="myBtn3" class="btn">Read more</button>
+                </div> 
+        </div>
+
+        <div class="container1">
+            <div class="item4 image">
+                <img src="https://th.bing.com/th/id/OIP.6LgMeos0InWnGrwK757cfQHaE8?pid=ImgDet&rs=1" height="400px" width="600px">
+            </div>
+            <div class="item4">
+                <h2 class="number">04</h2>
+                <h1 class="heading">Myeik Archipelago,Myanmar</h1>
+                <div class="reviews">
+                  <button class="bttn" id="bttn41"></button>
+                  <button class="bttn" id="bttn42"></button>
+                  <button class="bttn" id="bttn43"></button>
+                  <button class="bttn" id="bttn44"></button>
+                  <button class="bttn" id="bttn45"></button>
+                  <span class="review">8,556 reviews</span>
+                  </div>
+                <p class="info"> Myeik (also known as Mergui Archipelago) is a group of more than 800 pristine islands of varying sizes located in the Southern region of Myanmar on the Andaman Sea.These untouched islands are renowed for their pristine white sand beaches and diverse marine life.<span id="dots4" class="d">....</span><span id="more4" class="exra info">These is heaven for nature lovers and those looking for private beaach and islands at their holidays</span></p>
+                <button onclick="myFunction4()" id="myBtn4" class="btn">Read more</button>
+                </div> 
+        </div>
+
+        <div class="container1">
+            <div class="item5 image">
+                <img src="https://th.bing.com/th/id/OIP.TC63JEJstQ0MIqmreSB7ZgHaEh?pid=ImgDet&w=1440&h=879&rs=1" height="400px" width="600px">
+            </div>
+            <div class="item5">
+                <h2 class="number">05</h2>
+                <h1 class="heading">Northern Territory,Australia</h1>
+                <div class="reviews">
+                  <button class="bttn" id="bttn51"></button>
+                  <button class="bttn" id="bttn52"></button>
+                  <button class="bttn" id="bttn53"></button>
+                  <button class="bttn" id="bttn54"></button>
+                  <button class="bttn" id="bttn55"></button>
+                  <span class="review">4,432 reviews</span>
+                  </div>
+                <p class="info"> With shifting heat,sun baked landscapes and crocodile-infested waterways,the northean territory is australia at its rawest. The waterfront city of Dawn is fateway to the ourback, and from here you can adventure deep into the Read center in the search of world's most beautiful places<span id="dots5" class="d">....</span><span id="more5" class="exra info">The NT covers 1,349,129 square kilometres (520,902 sq mi), making it the third-largest Australian federal division, and the 11th-largest country subdivision in the world.</span></p>
+                <button onclick="myFunction5()" id="myBtn5" class="btn">Read more</button>
+                </div> 
+        </div>
+
+
+        <div class="container1">
+          <div class="item6 image">
+              <img src="https://th.bing.com/th/id/R.ff8a1bf426cd526f21d9a51c5bb63fe3?rik=L6RuZcD%2bO2q63w&riu=http%3a%2f%2fcdn.newsapi.com.au%2fimage%2fv1%2f6b9d2f9cea34243ed2f554ec393d07a6%3fwidth%3d1024&ehk=bZ%2bAxB6wu7rnKBXRBaXk42j%2bqH7sfdeRxf4zgatw8L8%3d&risl=&pid=ImgRaw&r=0" height="400px" width="600px">
+          </div>
+          <div class="item6">
+              <h2 class="number">06</h2>
+              <h1 class="heading">Ciudad Perdida(Lost City),Columbia</h1>
+              <div class="reviews">
+                <button class="bttn" id="bttn61"></button>
+                <button class="bttn" id="bttn62"></button>
+                <button class="bttn" id="bttn63"></button>
+                <button class="bttn" id="bttn64"></button>
+                <button class="bttn" id="bttn65"></button>
+                <span class="review">7,899 reviews</span>
+                </div>
+              <p class="info">Deep in the jungle-swathed mountains of sierra Nevada lies La Ciuded Perdida,Colombia's fabled ruined city dubbed "the new Machu Picchu".<span id="dots6" class="d">....</span><span id="more6" class="exra info">Ciudad Perdida (Spanish for "lost city"; also known as Teyuna and Buritaca-200[1]) is the archaeological site of an ancient city in the Sierra Nevada de Santa Marta of Colombia, within the jurisdiction of the city of Santa Marta.</span></p>
+              <button onclick="myFunction6()" id="myBtn6" class="btn">Read more</button>
+              </div> 
+      </div>
+
+
+      <div class="container1">
+        <div class="item7 image">
+            <img src="https://th.bing.com/th/id/OIP.JiW9VFBGzBBIGOuVTm3hyQHaD5?pid=ImgDet&rs=1" height="400px" width="600px">
+        </div>
+        <div class="item7">
+            <h2 class="number">07</h2>
+            <h1 class="heading">The Galapagos Islands,Ecuador</h1>
+            <div class="reviews">
+              <button class="bttn" id="bttn71"></button>
+              <button class="bttn" id="bttn72"></button>
+              <button class="bttn" id="bttn73"></button>
+              <button class="bttn" id="bttn74"></button>
+              <button class="bttn" id="bttn75"></button>
+              <span class="review">8,355 reviews</span>
+              </div>
+            <p class="info">The unique wildlife here has evolved to be fearless,stemming from the lack of predators on the volcanic isles,so you can easily snorkel with marine iguanas or share the rocky outcrops with the group of giant tortoises.<span id="dots7" class="d">....</span><span id="more7" class="exra info">The Galápagos are famous for their large number of endemic species, which were studied by Charles Darwin in the 1830s and inspired his theory of evolution by means of natural selection.</span></p>
+            <button onclick="myFunction7()" id="myBtn7" class="btn">Read more</button>
+            </div> 
+    </div>
+
+
+    <div class="container1">
+      <div class="item8 image">
+          <img src="https://cdn.britannica.com/00/188300-050-972ACBFB/Dolomites-Italian-Alps.jpg" height="400px" width="600px">
+      </div>
+      <div class="item8">
+          <h2 class="number">08</h2>
+          <h1 class="heading">The Dolomites,Italy</h1>
+          <div class="reviews">
+            <button class="bttn" id="bttn81"></button>
+            <button class="bttn" id="bttn82"></button>
+            <button class="bttn" id="bttn83"></button>
+            <button class="bttn" id="bttn84"></button>
+            <button class="bttn" id="bttn85"></button>
+            <span class="review">12,000 reviews</span>
+            </div>
+          <p class="info"> The Dolomites in the northean Italy have one of the highest concentrations of via ferrata in the world,giving hikers access to the craggy peaks without the need of high-tech equipmentsThe steel cables,ladders and suspended bridges are free to use.<span id="dots8" class="d">....</span><span id="more8" class="exra info">The Dolomites are renowned for skiing in the winter months and mountain climbing, hiking, cycling and BASE jumping, as well as paragliding and hang gliding in summer and late spring/early autumn.[8][9] Free climbing has been a tradition in the Dolomites.</span></p>
+          <button onclick="myFunction8()" id="myBtn8" class="btn">Read more</button>
+          </div> 
+  </div>
+
+
+  <div class="container1">
+    <div class="item9 image">
+        <img src="https://sites.google.com/a/miamioh.edu/geo122w2016/_/rsrc/1452182251273/home/hemis-np-03/hemis-national-park-is-famous-steve-winter.jpg" height="400px" width="600px">
+    </div>
+    <div class="item9">
+        <h2 class="number">09</h2>
+        <h1 class="heading">Hemis National Park,India</h1>
+        <div class="reviews">
+          <button class="bttn" id="bttn91"></button>
+          <button class="bttn" id="bttn92"></button>
+          <button class="bttn" id="bttn93"></button>
+          <button class="bttn" id="bttn94"></button>
+          <button class="bttn" id="bttn95"></button>
+          <span class="review"> reviews</span>
+          </div>
+        <p class="info">Hemis National Park is a high-elevation national park in Ladakh, India. Globally famous for its snow leopards, it is believed to have the highest density of them in any protected area in the world.The park is home to a number of species of endangered mammals, including the snow leopard.<span id="dots9" class="d">....</span><span id="more9" class="exra info">The park offers a number of routes for trekking from mid-June to mid-October; some of these trekking routes are among the most popular in Ladakh. This includes the Markha valley trek and the trek from Spituk to Stok over the Ganda La pass.The Hemis National Park is also famous for mountaineering expeditions.</span></p>
+        <button onclick="myFunction9()" id="myBtn9" class="btn">Read more</button>
+        </div> 
+    </div>
+
+
+    <div class="container1">
+      <div class="item10 image">
+          <img src="https://th.bing.com/th/id/R.3ab5b1b0f26f9035051a51ca055e5a10?rik=iEDsLqTOE2IA7Q&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fe%2fe8%2fAntarctica_(7)%2c_Laubeuf_Fjord%2c_Webb_Island.JPG&ehk=kFIZkJgcFvRmX7zkiDuHlefpK6MpBV4S2su21p1fVa0%3d&risl=&pid=ImgRaw&r=0" height="400px" width="600px">
+      </div>
+      <div class="item10 ">
+          <h2 class="number">10</h2>
+          <h1 class="heading">Antarctica</h1>
+          <div class="reviews">
+            <button class="bttn" id="bttn101"></button>
+            <button class="bttn" id="bttn102"></button>
+            <button class="bttn" id="bttn103"></button>
+            <button class="bttn" id="bttn104"></button>
+            <button class="bttn" id="bttn105"></button>
+            <span class="review">3,467 reviews</span>
+            </div>
+          <p class="info">Antarctica is, on average, the coldest, driest, and windiest of the continents, and it has the highest average elevation. It is mainly a polar desert, with annual precipitation of over 200 mm (8 in) along the coast and far less inland. About 70% of the world's freshwater reserves are frozen in Antarctica.<span id="dots10" class="d">....</span><span id="more10" class="exra info">While historic tales of polar exploration are fraught with shipwrecks and disasters,Antartica is rapidly emerging as a popular adventure travel destination.</span></p>
+          <button onclick="myFunction10()" id="myBtn10" class="btn">Read more</button>
+          </div> 
+      </div>
+
+
+      <!-- footer code -->
+      <div class="footer">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-heading">Explore</h3>
+            <a href="#" class="footer-link">About us</a>
+            <a href="#" class="footer-link">Our team</a>
+            <a href="#" class="footer-link">Parterner with us</a>
+            <a href="#" class="footer-link">Work with us</a>
+            <a href="#" class="footer-link">Contact us</a>
+            <a href="#" class="footer-link">FAQ's</a>
+            <a href="#" class="footer-link">Terms and conditions</a>
+            <a href="#" class="footer-link">Privacy policy</a>
+            <a href="#" class="footer-link">Blog</a>
+            <a href="#" class="footer-link">Travel Guides33232qewds</a>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Subscribe</h3>
+            <div class="footer-email">
+              <input type="email" placeholder="Enter your email">
+              <button>Subscribe</button>
+            </div>
+            <div class="footer-social-media">
+              <img src="https://example.com/social-media-icons/facebook.png" alt="Facebook">
+              <img src="https://example.com/social-media-icons/twitter.png" alt="Twitter">
+              <img src="https://example.com/social-media-icons/instagram.png" alt="Instagram">
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Discover</h3>
+            <div class="footer-search">
+              <input type="text" placeholder="Search">
+            </div>
+            <ul class="footer-countries">
+            <h3>Popular trecks</h3>
+              <li><a href="#" class="footer-link">Chadar treck</a></li>
+              <li><a href="#" class="footer-link">Everest base camp treck</a></li>
+              <li><a href="#" class="footer-link">Triund treck</a></li>
+              <li><a href="#" class="footer-link">Kheerganga treck</a></li>
+              <li><a href="#" class="footer-link">Kedarkhantha treck</a></li>
+              <li><a href="#" class="footer-link">Sandakpur treck</a></li>
+              <li><a href="#" class="footer-link">Kuari pass treck</a></li>
+              <li><a href="#" class="footer-link">Adventure clousers treck</a></li>
+           
+            </ul>
+          </div>
+        </div>
+        <div class="footer-ratings">
+          <span>Rate us:</span>
+          <img src="https://example.com/ratings/5-stars.png" alt="5 stars">
+        </div>
+      </div>
+
+
+    <script>
+        function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction3() {
+  var dots = document.getElementById("dots3");
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction5() {
+  var dots = document.getElementById("dots5");
+  var moreText = document.getElementById("more5");
+  var btnText = document.getElementById("myBtn5");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction6() {
+  var dots = document.getElementById("dots6");
+  var moreText = document.getElementById("more6");
+  var btnText = document.getElementById("myBtn6");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+
+function myFunction7() {
+  var dots = document.getElementById("dots7");
+  var moreText = document.getElementById("more7");
+  var btnText = document.getElementById("myBtn7");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+function myFunction8() {
+  var dots = document.getElementById("dots8");
+  var moreText = document.getElementById("more8");
+  var btnText = document.getElementById("myBtn8");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction9() {
+  var dots = document.getElementById("dots9");
+  var moreText = document.getElementById("more9");
+  var btnText = document.getElementById("myBtn9");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction10() {
+  var dots = document.getElementById("dots10");
+  var moreText = document.getElementById("more10");
+  var btnText = document.getElementById("myBtn10");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+</body>
+</html>

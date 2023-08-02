@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hotels.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <Style>
+        /*CSS Reset*/
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        /*CSS Variables*/
+        
+         /*   :root{
+                --navbar-height:59px;
+            }*/
+        /*Navigation bar*/
+        #navbar{
+            display:flex;/*All come in a row.*/
+            align-items:center;
+        }
+        
+        /*Navigation bar:Logo and Image*/
+        #logo{
+            margin:34px 45px;
+        }
+        #logo img{
+            height:82px;
+            margin:16px 10px;
+        }
+        #navbar ul{        /*navbar's ul*/
+            display:flex;
+        }
+        
+        #navbar ul li{
+            list-style:none;
+            font-size:1.3rem;
+        }
+        
+        #navbar ul li a{
+            display:block;
+            color:white;
+            /*display should be block so that we can give padding*/
+            padding:3px 22px;
+            border-radius:20px;
+            text-decoration:none/*to remove text underline*/
+        }
+        
+        #navbar ul li a:hover{
+            color:black;
+            background-color:white;
+        }
+
+
+        .font{
+            font-family: 'Satisfy', cursive;
+        }
+        #navbar::before{
+            content: "";
+            background-color:black;
+            position:absolute;
+            height:18%;
+            width:100%;
+            z-index:-1;
+            opacity:0.6;
+        }
+        /*Home section*/
+        #home{
+            display:flex;
+            flex-direction:column;
+            padding:3px 200px;
+            justify-content:center;
+            align-items:center;
+        }
+        #home::before{
+            content:"";
+            background:url('https://www.wallpaperup.com/uploads/wallpapers/2013/12/16/196349/120a672d510ad3ff94fe180e8421f2b2.jpg')no-repeat center center/cover;
+            position:absolute;
+            height:700px;
+            width:100%;
+            z-index:-1;
+            opacity:0.7;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr ;
+            grid-gap:20px;
+           
+            height:70px;
+            background-color:white;
+        }
+         
+        .item{
+            padding:30px;
+            margin:10px;
+            border-top:2px solid black;
+            border-bottom:2px solid black;
+            font-size:20px;
+        }
+        #item1{
+            border-left:2px solid black;
+        }
+        #item2{
+            border-right:2px solid black;
+        }
+
+        .ip{
+            height:30px;
+            width:105px;
+            padding:15px;
+        }
+
+        .submit{
+            padding:30px;
+        }
+
+        #item3{
+            padding:12px;
+            background-color:red;
+            color:white;
+            height:82px;
+            width:180px;
+            font-size:20px;
+        }
+.item5{
+    display:grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-gap:8px;
+    background-color:rgb(216, 214, 214);
+    border-radius:63px;
+}
+.bgcol:hover{
+    background-color:rgb(110, 108, 108);
+}
+ .box{
+    display:grid;
+    grid-gap:8px;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+ }
+ .item3{
+    padding:20px;
+    margin:10px;
+    border-radius:5px;
+    box-shadow:7px 5px 10px rgb(195, 193, 193);
+ }
+
+.bottom{
+    display:grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+    grid-gap:11px;
+}
+
+.footer {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        padding: 2rem;
+      }
+
+      .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .footer-column {
+        width: 30%;
+        margin-bottom: 2rem;
+      }
+
+      .footer-heading {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-email {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-email input[type="email"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        width: 200px;
+      }
+
+      .footer-email button {
+        background-color: #fff;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .footer-social-media {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-social-media img {
+        height: 30px;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      .footer-search {
+        margin-bottom: 2rem;
+      }
+
+      .footer-search input[type="text"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+      }
+
+      .footer-countries {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      .footer-countries li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-ratings {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-ratings span {
+        margin-right: 0.5rem;
+      }
+
+      .footer-ratings img {
+        height: 20px;
+      }
+
+      .btm{
+        display:flex;
+        flex-direction:column;
+        background-color:rgb(8, 8, 188);
+        color:white;
+        align-items:center;
+        justify-content: center;
+        width:100%;
+        height:195px;
+      }
+
+      
+    </style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+<body>
+
+    <nav id="navbar"> 
+        <div id="logo">
+            <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg">
+        </div>
+        <ul>
+            <li><a href="project webwonders.html">Home</a></li>
+            <li><a href="#"><u>Hotels</u></a></li>
+            <li><a href="flights by me.html">Flights</a></li>
+               <li><a href="train.html">Trains</a></li>
+               <li><a href="Buses.html">Buses</a></li>
+               <li><a href="support.html">Support</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <p style="font-size:50px;"class="h-primary" ><b>World Class Accomodation</b></p>
+        <p style="font-size:20px;"><b>Discover a hotel that defines</b></p>
+        <p style="font-size:20px; "><b>a new dimension of luxury</b></p><br>
+        <button class="btn" style="padding:20px; background-color:red; color:white; border:1px solid black;">View More</button>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <div></div>
+        
+        <div class="item" id="item1"><p>Check IN</p>
+            <input type="Date" class="ip">
+        </div>
+        <div class="item"><p>Check OUT</p>
+            <input type="Date" class="ip">
+        </div>
+        <div class="item">
+            <p>Room</p>
+            <select class="ip">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+            </select>
+        </div>
+        <div class="item">
+            <p>Adult</p>
+            <select class="ip">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+            </select>
+        </div>
+        <div class="item" id="item2">
+            <p>Children</p>
+            <select class="ip">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+            </select>
+        </div>
+    <div class="submit">
+        <i class="fa fa-fw fa-search"></i><input type="Submit" value="Check Availability" id="item3">
+    </div>
+    <div></div>
+ </div>
+<br><br><br><br><br><br><br>
+<div class="container2">
+    <div class="item5">
+
+        <div></div>
+       <div style=" padding:24px;margin:10px" > <img src="https://th.bing.com/th/id/OIP.SO4bVJPDnfIqhlnSP089SQHaE8?pid=ImgDet&w=728&h=486&rs=1" height="350px" width="400px" ></div>
+        <div style=" padding:20px;margin:10px">
+            <p style="font-size:32px; color:blue;">Hyatt Centric Juhu Mumbai</p><!--span><i class='far fa-heart'></i></span>-->
+            <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='far fa-star' style='font-size:20px'></i></p><br>
+            <p style="font-size:25px">Hotel<i class='fas fa-hotel'></i></p><br>
+            <p style="font-size:25px">5.5km to City centre</p><br>
+            <p style="font-size:25px"><b>8.9-Excellent(27 reviews)</b></p>
+        </div>
+        <div style=" padding:30px ; margin:10px">
+            <div style="border-radius:20px; background-color:rgb(216, 244, 216);padding:20px;width: 360px;px;height:135px;">
+            <p style="font-size:25px;"><b>Hyatt Hotels</b></p><br>
+            <p><i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Free cancellation</p><br><div style="display:flex;">
+            <p style='font-size:25px;color:green'>₹10,443&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <button style="background-color:green;color:white;padding:-4px ;width:100px;height:33px;border-radius:19px;">View Deal<i class='fas fa-angle-right' style='font-size:14px;color:white'></i></button></div>
+            </div>
+            <div style="display:flex;">
+                <div class="bgcol" style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:104px ;width:165px;border-radius:15px">
+                    <p style="font-size:20px">Bookingsathotel.com</p><br><br>
+                    <p style="font-size:25px"><b>₹10,443</b></p>
+                </div>
+                <div class="bgcol"style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:103px ;width:122px;border-radius:15px;">
+                    <p style="font-size:20px">Our Lowest Price:</p><br>
+                    <p style="font-size:25px"><b>₹8,610</b></p>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div><br><br>
+    <div class="item5">
+        <div></div>
+        <div style=" padding:24px;margin:10px" > <img src="https://asset1.zankyou.com/images/card-main/184/baea/550/475/w/539345/-/1485434303.jpg" height="350px" width="400px" ></div>
+         <div style=" padding:20px;margin:10px">
+             <p style="font-size:32px; color:blue;">Radisson Hotel Agra</p><!--span><i class='far fa-heart'></i></span>-->
+             <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i></p><br>
+             <p style="font-size:25px">Hotel<i class='fas fa-hotel'></i></p><br>
+             <p style="font-size:25px">2km to City centre</p><br>
+             <p style="font-size:25px"><b>9.5-Excellent(51 reviews)</b></p>
+         </div>
+         <div style=" padding:30px ; margin:10px">
+             <div style="border-radius:20px; background-color:rgb(216, 244, 216);padding:20px;width: 360px;px;height:135px;">
+             <p style="font-size:25px;"><b>Radisson Group</b></p><br>
+             <p><i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Free cancellation &nbsp; <i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Pay at Property </p><br><div style="display:flex;">
+             <p style='font-size:25px;color:green'>₹8,910&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+             <button style="background-color:green;color:white;padding:-4px ;width:100px;height:33px;border-radius:19px;">View Deal<i class='fas fa-angle-right' style='font-size:14px;color:white'></i></button></div>
+             </div>
+             <div style="display:flex;">
+                 <div class="bgcol" style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:104px ;width:165px;border-radius:15px">
+                     <p style="font-size:20px">Ajodda.com</p><br><br>
+                     <p style="font-size:25px"><b>₹9,300</b></p>
+                 </div>
+                 <div class="bgcol"style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:103px ;width:122px;border-radius:15px;">
+                     <p style="font-size:20px">Our Lowest Price:</p><br>
+                     <p style="font-size:25px"><b>₹8,910</b></p>
+                 </div>
+             </div>
+         </div>
+         <div></div>
+     </div>
+    </div><br><br>
+    <div class="item5">
+        <div></div>
+        <div style=" padding:24px;margin:10px" > <img src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?cs=srgb&dl=building-chair-comfort-276528.jpg&fm=jpg" height="350px" width="400px" ></div>
+         <div style=" padding:20px;margin:10px">
+             <p style="font-size:32px; color:blue;">Ramee Hometel</p><!--span><i class='far fa-heart'></i></span>-->
+             <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='far fa-star' style='font-size:20px'></i></p><br>
+             <p style="font-size:25px">Entire House/Apartment<i class='fas fa-home'></i></p><br>
+             <p style="font-size:25px">1.2km to City centre</p><br>
+             <p style="font-size:25px"><b>8.5-Best(32 reviews)</b></p>
+         </div>
+         <div style=" padding:30px ; margin:10px">
+             <div style="border-radius:20px; background-color:rgb(216, 244, 216);padding:20px;width: 360px;px;height:135px;">
+             <p style="font-size:25px;"><b>Hometel Associations</b></p><br>
+             <p><i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Free cancellation</p><br><div style="display:flex;">
+             <p style='font-size:25px;color:green'>₹12,610&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+             <button style="background-color:green;color:white;padding:-4px ;width:100px;height:33px;border-radius:19px;">View Deal<i class='fas fa-angle-right' style='font-size:14px;color:white'></i></button></div>
+             </div>
+             <div style="display:flex;">
+                 <div class="bgcol" style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:104px ;width:165px;border-radius:15px">
+                     <p style="font-size:20px">Hotel.com</p><br><br>
+                     <p style="font-size:25px"><b>₹12,610</b></p>
+                 </div>
+                 <div class="bgcol"style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:103px ;width:122px;border-radius:15px;">
+                     <p style="font-size:20px">Our Lowest Price:</p><br>
+                     <p style="font-size:25px"><b>₹12,610</b></p>
+                 </div>
+             </div>
+         </div>
+         <div></div>
+     </div>
+    </div><br><br>
+    <div class="item5">
+        <div></div>
+        <div style=" padding:24px;margin:10px" > <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/317/31710260.jpg" height="350px" width="400px" ></div>
+         <div style=" padding:20px;margin:10px">
+             <p style="font-size:32px; color:blue;">Blue Diamond Hotel</p><!--span><i class='far fa-heart'></i></span>-->
+             <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='far fa-star' style='font-size:20px'></i><i class='far fa-star' style='font-size:20px'></i></p><br>
+             <p style="font-size:25px">Hotel<i class='fas fa-hotel'></i></p><br>
+             <p style="font-size:25px">2.2km to City centre</p><br>
+             <p style="font-size:25px"><b>7.9-Good(15 reviews)</b></p>
+         </div>
+         <div style=" padding:30px ; margin:10px">
+             <div style="border-radius:20px; background-color:rgb(216, 244, 216);padding:20px;width: 360px;px;height:135px;">
+             <p style="font-size:25px;"><b>Blue Diamond</b></p><br>
+             <p><i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Free cancellation</p><br><div style="display:flex;">
+             <p style='font-size:25px;color:green'>₹5,443&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+             <button style="background-color:green;color:white;padding:-4px ;width:100px;height:33px;border-radius:19px;">View Deal<i class='fas fa-angle-right' style='font-size:14px;color:white'></i></button></div>
+             </div>
+             <div style="display:flex;">
+                 <div class="bgcol" style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:104px ;width:165px;border-radius:15px">
+                     <p style="font-size:20px">Bookingsathotel.com</p><br><br>
+                     <p style="font-size:25px"><b>₹5,443</b></p>
+                 </div>
+                 <div class="bgcol"style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:103px ;width:122px;border-radius:15px;">
+                     <p style="font-size:20px">Our Lowest Price:</p><br>
+                     <p style="font-size:25px"><b>₹5,443</b></p>
+                 </div>
+             </div>
+         </div>
+         <div></div>
+     </div>
+    </div><br><br>
+    <div class="item5">
+        <div></div>
+        <div style=" padding:24px;margin:10px" > <img src="https://i.pinimg.com/originals/01/90/54/019054df253ab4af2cdae90d9b62d1e1.jpg" height="350px" width="400px" ></div>
+         <div style=" padding:20px;margin:10px">
+             <p style="font-size:32px; color:blue;">Andaz Delhi</p><!--span><i class='far fa-heart'></i></span>-->
+             <p><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i><i class='fas fa-star' style='font-size:20px;color:yellow'></i></p><br>
+             <p style="font-size:25px">Hotel<i class='fas fa-hotel'></i></p><br>
+             <p style="font-size:25px">6.9km to City centre</p><br>
+             <p style="font-size:25px"><b>9.9-Excellent(1331 reviews)</b></p>
+         </div>
+         <div style=" padding:30px ; margin:10px">
+             <div style="border-radius:20px; background-color:rgb(216, 244, 216);padding:20px;width: 360px;px;height:135px;">
+             <p style="font-size:25px;"><b>Hyatt Hotels</b></p><br>
+             <p><i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Free cancellation &nbsp;<i class='far fa-thumbs-up' style='font-size:24px;color:green'></i>Free Breakfast</p><br><div style="display:flex;">
+             <p style='font-size:25px;color:green'>₹11,443&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+             <button style="background-color:green;color:white;padding:-4px ;width:100px;height:33px;border-radius:19px;">View Deal<i class='fas fa-angle-right' style='font-size:14px;color:white'></i></button></div>
+             </div>
+             <div style="display:flex;">
+                 <div class="bgcol" style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:104px ;width:165px;border-radius:15px">
+                     <p style="font-size:20px">Bookingsathotel.com</p><br><br>
+                     <p style="font-size:25px"><b>₹11,443</b></p>
+                 </div>
+                 <div class="bgcol"style="background-color:rgb(238, 237, 237);padding:20px;margin:10px;height:103px ;width:122px;border-radius:15px;">
+                     <p style="font-size:20px">Our Lowest Price:</p><br>
+                     <p style="font-size:25px"><b>₹11,443</b></p>
+                 </div>
+             </div>
+         </div>
+         <div></div>
+     </div>
+    </div>
+</div><br><br><br>
+<div class="box">
+    <div></div>
+    <div class="item3">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-bed' style='font-size:36px;color:rgb(91, 233, 238)'></i></p><br>
+        <p style="color:black;font-size:20px;text-align: center;" onmouseover="change(this)" onmouseout="mout(this)" >Relax</p>
+    </div>
+    <div class="item3">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-spa' style='font-size:36px;color:rgb(91, 233, 238);'></i></p><br>
+        <p style="color:black;font-size:20px;text-align: center;"  onmouseover="change(this)" onmouseout="mout(this)">Spa</p>
+    </div>
+    <div class="item3">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-cocktail' style='font-size:36px;color:rgb(91, 233, 238)'></i></p><br>
+        <p style="color:black;font-size:20px;text-align: center;"  onmouseover="change(this)" onmouseout="mout(this)">Restaurants</p>
+    </div>
+    <div class="item3">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-shuttle-van' style='font-size:36px;color:rgb(91, 233, 238)'></i></p><br>
+        <p style="color:black;font-size:20px;text-align: center;" onmouseover="change(this)" onmouseout="mout(this)">Transportation</p>
+    </div>
+    <div class="item3">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-globe-asia' style='font-size:36px;color:rgb(91, 233, 238)'></i></p><br>
+        <p style="color:black;font-size:20px;text-align: center;" onmouseover="change(this)" onmouseout="mout(this)" >Travel</p>
+    </div>
+    <div class="item3">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-snowboarding' style='font-size:36px;color:rgb(91, 233, 238)'></i></p><br>
+        <p style="color:black;font-size:20px;text-align: center;" onmouseover="change(this)" onmouseout="mout(this)" >Play</p>
+    </div>
+    <div></div>
+</div><br><br><br>
+
+
+
+<p style="font-size:30px;text-align:center;">Stay at our unique properties</p><br>
+<p style="font-size:20px;text-align:center;">From castles and villas to boats and igloos,we've got it all</p><br>
+<div class="bottom">
+    <div></div>
+<div>
+<img src="https://wallpaperaccess.com/full/4401192.jpg" height="250px" width="250px">
+<p style="font-size:30px"><b>Ranczo w Dolinie</b></p><br>
+<p style="font-size:20px">Poland,Kiszkowo</p><br>
+<span><button style="background-color:rgb(3, 3, 95);color:white;padding:13px ; margin:8px;">9.3</button></span>
+<span>&nbsp;Very  Good</span>
+<span>&nbsp;232 reviews</span>
+</div>
+<div>
+    <img src="https://th.bing.com/th/id/OIP.qz_Xv6-cq-aEER46Mj2PUgHaHZ?pid=ImgDet&rs=1" height="250px" width="250px">
+<p style="font-size:30px"><b>La Roulotte de Ciney</b></p><br>
+<p style="font-size:20px">Belgium,Ciney</p><br>
+<span><button style="background-color:rgb(3, 3, 95);color:white;padding:13px ; margin:8px;">8.3</button></span>
+<span>&nbsp;Very Very Good</span>
+<span>&nbsp;100 reviews</span>
+</div>
+<div>
+    <img src="https://th.bing.com/th/id/OIP.tELykl9rd-qp5hAvdqODFQHaFk?pid=ImgDet&rs=1" height="250px" width="250px">
+<p style="font-size:30px"><b>Domki Wierszyki </b></p><br>
+<p style="font-size:20px">Poland,Zakopane</p><br>
+<span><button style="background-color:rgb(3, 3, 95);color:white;padding:13px ; margin:8px;">8.9</button></span>
+<span>&nbsp;Excellent</span>
+<span>&nbsp;90 reviews</span>
+</div>
+<div>
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/187853972.jpg?k=ef023a932afffc69acbb2db904ceb2c6827bf8d1f24bd6cef3ec3505eddae7c2&o=&hp=1" height="250px" width="250px">
+<p style="font-size:30px"><b>Tiny House </b></p><br>
+<p style="font-size:20px">Germany,Trier</p><br>
+<span><button style="background-color:rgb(3, 3, 95);color:white;padding:13px ; margin:8px;">9.3</button></span>
+<span>&nbsp;Exceptional</span>
+<span>&nbsp;45 reviews</span>
+</div>
+<div></div>
+</div>
+<br><br><br>
+<div class="btm">
+    <p style="font-size:30px;">Save Time,Save Money!</p>
+    <p style="font-size:25px">Sign up and we'll send the best deals to you</p>
+   <p><input type="email" placeholder="Your email address" style="padding:16px;margin:8px;width:242px ;height:4px">
+    <input type="submit" value="Subscribe"  style="padding:11px;margin:1px;width:108px ;height:40px;background-color:rgb(22, 203, 253);color:white;"></p>
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3 class="footer-heading">Explore</h3>
+        <a href="#" class="footer-link">About us</a>
+        <a href="#" class="footer-link">Our team</a>
+        <a href="#" class="footer-link">Parterner with us</a>
+        <a href="#" class="footer-link">Work with us</a>
+        <a href="#" class="footer-link">Contact us</a>
+        <a href="#" class="footer-link">FAQ's</a>
+        <a href="#" class="footer-link">Terms and conditions</a>
+        <a href="#" class="footer-link">Privacy policy</a>
+        <a href="#" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Travel Guides33232qewds</a>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-heading">Subscribe</h3>
+        <div class="footer-email">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+        <div class="footer-social-media">
+          <img src="https://example.com/social-media-icons/facebook.png" alt="Facebook">
+          <img src="https://example.com/social-media-icons/twitter.png" alt="Twitter">
+          <img src="https://example.com/social-media-icons/instagram.png" alt="Instagram">
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-heading">Discover</h3>
+        <div class="footer-search">
+          <input type="text" placeholder="Search">
+        </div>
+        <ul class="footer-countries">
+        <h3>Popular Searches</h3>
+          <li><a href="#" class="footer-link">Hotel The Orchid</a></li>
+          <li><a href="#" class="footer-link">Hotel Royal INN</a></li>
+          <li><a href="#" class="footer-link">Andazz Mumbai</a></li>
+          <li><a href="#" class="footer-link">Bestietel</a></li>
+          <li><a href="#" class="footer-link">Comfort Inn</a></li>
+          <li><a href="#" class="footer-link">Diamond Hotel</a></li>
+          <li><a href="#" class="footer-link">Avenue Pune</a></li>
+          <li><a href="#" class="footer-link">RajaShah Agra</a></li>
+       
+        </ul>
+      </div>
+    </div>
+    <div class="footer-ratings">
+      <span>Rate us:</span>
+      <img src="https://example.com/ratings/5-stars.png" alt="5 stars">
+    </div>
+  </div>
+
+ <script src="https://kit.fontawesome.com/5736e85798.js"></script>   
+ <script src="JS.js"></script>
+ </body>
+</html>

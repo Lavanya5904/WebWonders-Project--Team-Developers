@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /*Navigation bar*/
+         #navbar{
+           display:flex;/*All come in a row.*/
+           align-items:center;
+       }
+       
+       /*Navigation bar:Logo and Image*/
+       #logo{
+           margin:34px 45px;
+       }
+       #logo img{
+           height:82px;
+           margin:16px 10px;
+       }
+       #navbar ul{        /*navbar's ul*/
+           display:flex;
+       }
+       
+       #navbar ul li{
+           list-style:none;
+           font-size:1.3rem;
+       }
+       
+       #navbar ul li a{
+           display:block;
+           color:white;
+           /*display should be block so that we can give padding*/
+           padding:3px 22px;
+           border-radius:20px;
+           text-decoration:none/*to remove text underline*/
+       }
+       
+       #navbar ul li a:hover{
+           color:black;
+           background-color:white;
+       }
+
+
+       .font{
+           font-family: 'Satisfy', cursive;
+       }
+       #navbar::before{
+           content: "";
+           background-color:black;
+           position:absolute;
+           height:18%;
+           width:100%;
+           z-index:-1;
+           opacity:0.6;
+       }
+
+       /*Home section*/
+       #home{
+           display:flex;
+           flex-direction:column;
+           padding:3px 200px;
+           justify-content:center;
+           align-items:center;
+       }
+       #home::before{
+           content:"";
+           background:url('https://th.bing.com/th/id/R.131fc64f22fa8fded65f34309a01b4e2?rik=6tPCVb4y3lF%2fhQ&riu=http%3a%2f%2fwp.widewallpapers.ru%2f2k%2frailroad%2fjapan-high-speed-trains%2f1920x1080%2fjapan-high-speed-train-1920x1080-015.jpg&ehk=jGpS0gXYS93Zaid6XnMQBCrC0xoNwU0%2f72UAbl7v%2fQU%3d&risl=&pid=ImgRaw&r=0')no-repeat center center/cover;
+           position:absolute;
+           height:700px;
+           width:100%;
+           z-index:-1;
+           opacity:0.7;
+       }
+       .body{
+        display:grid;
+        grid-template-columns: 0.3fr 1fr;
+       }
+       .booking{
+        padding:20px;
+        margin:2px;
+        border-radius:5px;
+    box-shadow:7px 5px 10px rgb(165, 164, 164);
+    height:462px;
+    width:1000px;
+       }
+       .ticket{
+        background-color:rgb(229, 227, 227);
+        height:100px;
+        width:195px;
+        padding:20px;
+        margin:10px;
+       }
+       
+       .footer {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        padding: 2rem;
+      }
+
+      .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .footer-column {
+        width: 30%;
+        margin-bottom: 2rem;
+      }
+
+      .footer-heading {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-email {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-email input[type="email"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        width: 200px;
+      }
+
+      .footer-email button {
+        background-color: #fff;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .footer-social-media {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-social-media img {
+        height: 30px;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      .footer-search {
+        margin-bottom: 2rem;
+      }
+
+      .footer-search input[type="text"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+      }
+
+      .footer-countries {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      .footer-countries li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-ratings {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-ratings span {
+        margin-right: 0.5rem;
+      }
+
+      .footer-ratings img {
+        height: 20px;
+      }
+
+      .btm{
+        display:flex;
+        flex-direction:column;
+        background-color:rgb(8, 8, 188);
+        color:white;
+        align-items:center;
+        justify-content: center;
+        width:100%;
+        height:195px;
+      }
+
+      .search{
+        display:grid;
+        grid-template-columns: 0.2fr 1fr 0.1fr 1fr 1fr 1fr 0.2fr;
+      }
+
+      
+
+    </style>
+</head>
+<body>
+    <nav id="navbar"> 
+        <div id="logo">
+            <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg">
+        </div>
+        <ul>
+          <li><a href="project webwonders.html">Home</a></li>
+            <li><a href="flights by me.html">Flights</a></li>
+               <li><a href="Hotel.html">Hotels</a></li>
+               <li><a href="#"><u>Trains</u></a></li>
+               <li><a href="Buses.html">Buses</a></li>
+               <li><a href="support.html">Support</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <p style="font-size:50px;color:black;"class="h-primary" ><b>The smart way to sightsee.</b></p>
+        <p style="font-size:30px;color:black;"><b>  Enjoy hassle-free travel with trains booking. </b></p>
+        <button class="btn" style="padding:20px; background-color:red; color:white; border:1px solid black;">View More</button>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+   
+    <div class="body">
+        <div class="filt">
+            <p style="font-size:30px;"><b>Filters</b></p>
+            <hr>
+            <p style="font-size:25px;"><b>Quota</b></p>
+          <p style="font-size:25px;">  <input type="radio" name="quota">
+                                General &nbsp;<input type="radio" name="quota">
+                                Tatkal &nbsp;</p>
+                                <p style="font-size:25px"><input type="radio" name="quota">Ladies &nbsp;&nbsp;<input type="radio" name="quota">Sr. Citizen</p>
+            <hr>
+            <p style="font-size:25px;"><b>Origin Station</b></p>
+          <p style="font-size:25px;">  <input type="radio" name="origin">
+                                XYZ &nbsp;<input type="radio" name="origin">
+                                PQR &nbsp;</p>
+            <hr>
+            <p style="font-size:25px;"><b>Destination Station</b></p>
+          <p style="font-size:25px;">  <input type="radio" name="dest">
+                                ABC &nbsp;<input type="radio" name="dest">
+                                EFG &nbsp;</p>
+                            <hr>
+        <p style="font-size:25px;"><b>Arrival Time</b></p>
+      <p>  <button style="padding:10px;width:152px;font-size:15px;height:49px;">05:00 - 11:00</button>
+        <button style="padding:10px;width:152px;font-size:15px;height:49px;">11:00 - 17:00</button></p>
+       <p> <button style="padding:10px;width:152px;font-size:15px;height:49px;">17:00 - 23:00</button>
+        <button style="padding:10px;width:152px;font-size:15px;height:49px;">23:00 - 05:00</button></p>
+<hr>
+        <p style="font-size:25px;"><b>Departure Time</b></p>
+      <p>  <button style="padding:10px;width:152px;font-size:15px;height:49px;">05:00 - 11:00</button>
+        <button style="padding:10px;width:152px;font-size:15px;height:49px;">11:00 - 17:00</button></p>
+       <p> <button style="padding:10px;width:152px;font-size:15px;height:49px;">17:00 - 23:00</button>
+        <button style="padding:10px;width:152px;font-size:15px;height:49px;">23:00 - 05:00</button></p>
+      <hr>
+    </div>
+        <div class="main">
+            <div class="booking">
+                <div style="display:grid;grid-template-columns: 4fr 1fr;padding:9px;">
+                    <div><p style="font-size:30px;"><b>12904 - GOLDEN TEMPLE M</b></p></div>
+                    <div><p style="font-size:26px">S M T W T F S</p></div>
+                </div>
+                <div style="display:grid;grid-template-columns: 4fr 1fr;padding:0px;">
+                    <div><p style="font-size:25px;">04:00 NZM&nbsp; <span style="font-size:20px;">---19h 35m---</span> 23:35 MMCT</p></div>
+                    <div><p style="font-size:25px;color:red;"><a href="#" style="color:red;">View Schedule</a></p></div>
+                </div>
+                <div style="display:flex;padding:20px;margin:3px;">
+                    <div class="ticket">
+                        <p style="font-size:15px;">SL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹620</p>
+                        <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL101/WL75</p>
+                        <p style="font-size:15px;color:rgb(242, 209, 64);">62% chance</p>
+                        <p style="font-size:15px;">1hr ago</p>
+                    </div>
+                    <div class="ticket">
+                        <p style="font-size:15px;">3A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹1620</p>
+                        <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL2/WL6</p>
+                        <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                        <p style="font-size:15px;">1hr ago</p>
+                    </div>
+                    <div class="ticket">
+                        <p style="font-size:15px;">2A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹2620</p>
+                        <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL5/WL2</p>
+                        <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                        <p style="font-size:15px;">1hr ago</p>
+                    </div>
+                    <div class="ticket">
+                        <p style="font-size:15px;">1A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹3620</p>
+                        <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL2/WL2</p>
+                        <p style="font-size:15px;color:rgb(242, 209, 64);">70% chance</p>
+                        <p style="font-size:15px;">1hr ago</p>
+                    </div>
+
+                </div>
+                <p style="color:red;font-size:25px;">Check 6 days availability</p>
+            </div>
+            
+                <div class="booking">
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:9px;">
+                        <div><p style="font-size:30px;"><b>12649 - SAMPARK KRANTI</b></p></div>
+                        <div><p style="font-size:26px">S M W F S</p></div>
+                    </div>
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:0px;">
+                        <div><p style="font-size:25px;">13:50 YPR&nbsp; <span style="font-size:20px;">---22h 35m---</span> 08:10 NZM</p></div>
+                        <div><p style="font-size:25px;color:red;"><a href="#" style="color:red;">View Schedule</a></p></div>
+                    </div>
+                    <div style="display:flex;padding:20px;margin:3px;">
+                        <div class="ticket">
+                            <p style="font-size:15px;">SL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL101/WL75</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">62% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">3A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹1620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL2/WL6</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">2A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹2620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL5/WL2</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">1A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹3620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL2/WL2</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">70% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+    
+                    </div>
+                    <p style="color:red;font-size:25px;">Check 6 days availability</p>
+            </div>
+            
+                <div class="booking">
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:9px;">
+                        <div><p style="font-size:30px;"><b>12904 - GOLDEN TEMPLE M</b></p></div>
+                        <div><p style="font-size:26px">S M T W T F S</p></div>
+                    </div>
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:0px;">
+                        <div><p style="font-size:25px;">04:00 NZM&nbsp; <span style="font-size:20px;">---19h 35m---</span> 23:35 MMCT</p></div>
+                        <div><p style="font-size:25px;color:red;"><a href="#" style="color:red;">View Schedule</a></p></div>
+                    </div>
+                    <div style="display:flex;padding:20px;margin:3px;">
+                        <div class="ticket">
+                            <p style="font-size:15px;">SL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL101/WL75</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">62% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">3A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹1620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL2/WL6</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">2A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹2620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL5/WL2</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">1A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹3620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL2/WL2</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">70% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+    
+                    </div>
+                    <p style="color:red;font-size:25px;">Check 6 days availability</p>
+            </div>
+            
+                <div class="booking">
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:9px;">
+                        <div><p style="font-size:30px;"><b>12904 - GOLDEN TEMPLE M</b></p></div>
+                        <div><p style="font-size:26px">S M T W T F S</p></div>
+                    </div>
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:0px;">
+                        <div><p style="font-size:25px;">04:00 NZM&nbsp; <span style="font-size:20px;">---19h 35m---</span> 23:35 MMCT</p></div>
+                        <div><p style="font-size:25px;color:red;"><a href="#" style="color:red;">View Schedule</a></p></div>
+                    </div>
+                    <div style="display:flex;padding:20px;margin:3px;">
+                        <div class="ticket">
+                            <p style="font-size:15px;">SL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL101/WL75</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">62% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">3A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹1620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL2/WL6</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">2A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹2620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL5/WL2</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">1A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹3620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL2/WL2</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">70% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+    
+                    </div>
+                    <p style="color:red;font-size:25px;">Check 6 days availability</p>
+            </div>
+            
+                <div class="booking">
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:9px;">
+                        <div><p style="font-size:30px;"><b>12904 - GOLDEN TEMPLE M</b></p></div>
+                        <div><p style="font-size:26px">S M T W T F S</p></div>
+                    </div>
+                    <div style="display:grid;grid-template-columns: 4fr 1fr;padding:0px;">
+                        <div><p style="font-size:25px;">04:00 NZM&nbsp; <span style="font-size:20px;">---19h 35m---</span> 23:35 MMCT</p></div>
+                        <div><p style="font-size:25px;color:red;"><a href="#" style="color:red;">View Schedule</a></p></div>
+                    </div>
+                    <div style="display:flex;padding:20px;margin:3px;">
+                        <div class="ticket">
+                            <p style="font-size:15px;">SL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL101/WL75</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">62% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">3A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹1620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL2/WL6</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">2A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹2620</p>
+                            <p style="color:rgb(45, 134, 45);font-size:20px;">RLWL5/WL2</p>
+                            <p style="font-size:15px;color:rgb(45, 134, 45);">82% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+                        <div class="ticket">
+                            <p style="font-size:15px;">1A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹3620</p>
+                            <p style="color:rgb(242, 209, 64);font-size:20px;">RLWL2/WL2</p>
+                            <p style="font-size:15px;color:rgb(242, 209, 64);">70% chance</p>
+                            <p style="font-size:15px;">1hr ago</p>
+                        </div>
+    
+                    </div>
+                    <p style="color:red;font-size:25px;">Check 6 days availability</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-heading">Explore</h3>
+            <a href="#" class="footer-link">About us</a>
+            <a href="#" class="footer-link">Our team</a>
+            <a href="#" class="footer-link">Parterner with us</a>
+            <a href="#" class="footer-link">Work with us</a>
+            <a href="#" class="footer-link">Contact us</a>
+            <a href="#" class="footer-link">FAQ's</a>
+            <a href="#" class="footer-link">Terms and conditions</a>
+            <a href="#" class="footer-link">Privacy policy</a>
+            <a href="#" class="footer-link">Blog</a>
+            <a href="#" class="footer-link">Travel Guides33232qewds</a>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Subscribe</h3>
+            <div class="footer-email">
+              <input type="email" placeholder="Enter your email">
+              <button>Subscribe</button>
+            </div>
+            <div class="footer-social-media">
+              <img src="https://example.com/social-media-icons/facebook.png" alt="Facebook">
+              <img src="https://example.com/social-media-icons/twitter.png" alt="Twitter">
+              <img src="https://example.com/social-media-icons/instagram.png" alt="Instagram">
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Discover</h3>
+            <div class="footer-search">
+              <input type="text" placeholder="Search">
+            </div>
+            <ul class="footer-countries">
+            <h3>Popular Searches</h3>
+              <li><a href="#" class="footer-link">Hotel The Orchid</a></li>
+              <li><a href="#" class="footer-link">Hotel Royal INN</a></li>
+              <li><a href="#" class="footer-link">Andazz Mumbai</a></li>
+              <li><a href="#" class="footer-link">Bestietel</a></li>
+              <li><a href="#" class="footer-link">Comfort Inn</a></li>
+              <li><a href="#" class="footer-link">Diamond Hotel</a></li>
+              <li><a href="#" class="footer-link">Avenue Pune</a></li>
+              <li><a href="#" class="footer-link">RajaShah Agra</a></li>
+           
+            </ul>
+          </div>
+        </div>
+        <div class="footer-ratings">
+          <span>Rate us:</span>
+          <img src="https://example.com/ratings/5-stars.png" alt="5 stars">
+        </div>
+      </div>
+</body>
+</html>
